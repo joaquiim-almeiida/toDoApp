@@ -41,6 +41,11 @@ const Home = props => {
   const aoClicar = (id: number) => {
     props.navigation.navigate({ name: 'DETAIL_SCREEN' });
   };
+
+  const aoEditar = (id: number) => {
+    props.navigation.navigate({ name: 'EDIT_SCREEN' });
+  };
+
   return (
     <View style={{ paddingTop: 20, paddingHorizontal: 15, gap: 10 }}>
       {/* <ScrollView>
@@ -64,6 +69,7 @@ const Home = props => {
               key={index}
               id={item.id}
               aoClicar={aoClicar}
+              aoEditar={aoEditar}
             />
           );
         }}
